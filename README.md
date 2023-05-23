@@ -33,6 +33,8 @@ Subscription: Select the Azure subscription you are using for this lab.
 Resource group: Click on "Create new" and enter the name "AZ500LAB07".
 Name: Enter "myVirtualNetwork".
 Region: Select "South Central US".
+![Setting Up Basic Tab Virtual Network](Setting Up Virtual Network.png)
+
 Switch to the IP addresses tab, set the IPv4 address space to "10.0.0.0/16", and set the Subnet address range to "10.0.0.0/24".
 Click on "Review + create" and then click "Create" to create the virtual network.
 Task 2: Create application security groups
