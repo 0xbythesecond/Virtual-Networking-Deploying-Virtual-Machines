@@ -12,7 +12,7 @@ Now, let's dive into the lab and start building your virtual networking infrastr
 
 ## Task to Implement Virtual Networking Infrastructure
 
-### Exercise 1: Create the virtual networking infrastructure
+### *Exercise 1: Create the virtual networking infrastructure*
 
 Estimated Time: 20 minutes
 
@@ -24,7 +24,7 @@ Task 3: Create a network security group and associate it with the virtual networ
 Task 4: Create inbound network security group rules to allow traffic to web servers and RDP to management servers.<br/>
 
 <details> 
-  <summary> Task 1: Create a virtual network </summary>
+  <summary> Exercise 1 ---> Task 1: Create a virtual network </summary>
 
 Sign in to the Azure portal using an account that has the Owner or Contributor role in the Azure subscription.
   <br />
@@ -62,7 +62,7 @@ Click on `Review + create` and then click `Create` to create the virtual network
 <hr>
   
   <details>
-  <summary> Task 2: Create application security groups </summary>
+  <summary> Exercise 1 ---> Task 2: Create application security groups </summary>
 
 In the Azure portal, search for `Application security groups` and select it from the results.
   <br />
@@ -97,7 +97,7 @@ In the Azure portal, search for `Application security groups` and select it from
 </details>
 <hr>
 <details> 
-  <summary> Task 3: Create a network security group and associate it with the subnet</summary>
+  <summary> Exercise 1 ---> Task 3: Create a network security group and associate it with the subnet</summary>
 
 In the Azure portal, search for `Network security groups` and select it from the results.
   <br />
@@ -136,7 +136,7 @@ In the Azure portal, search for `Network security groups` and select it from the
   </details>
 <hr>
 <details>
-  <summary> Task 4: Create inbound NSG security rules </summary>
+  <summary> Exercise 1 ---> Task 4: Create inbound NSG security rules </summary>
 
 - On the myNsg blade, in the Settings section, click `Inbound security rules`. <br />
 - Review the default inbound security rules and then click `+ Add` to add a new rule. <br />
@@ -145,7 +145,7 @@ In the Azure portal, search for `Network security groups` and select it from the
 
 | Setting |	Value |
 |---------| --------|
-|Destination |	in the drop-down list, select Application security group and then click myAsgWebServers|
+|Destination |	in the drop-down list, select Application security group and then click `myAsgWebServers`|
 |Destination| port ranges	80,443|
 |Protocol |	TCP |
 | Priority |	100 (lower the number, the higher the priority) |
@@ -164,13 +164,25 @@ Add inbound security rule:
 - Name: Enter "Allow-RDP-All."<br />
 - Click "Add" to create the new inbound rule.<br />
 - Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
-  
+ 
+  >**Note**: Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups.
+
+|Setting	| Value|
+|---------- | ----------- |  
+| Destination |	in the drop-down list, select Application security group and then click `myAsgMgmtServers`|
+|Destination port ranges |	3389|
+|Protocol	| TCP |
+| Priority |	110 |
+| Name |	Allow-RDP-All|
+
+
 ![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
   
 </details>
 <hr>
 <br />
-Exercise 2: Deploy Virtual Machines and Test Network Filters
+
+### *Exercise 2: Deploy Virtual Machines and Test Network Filters*
 
 Estimated timing: 25 minutes
 
@@ -184,25 +196,44 @@ Task 4: Test the network traffic filtering.<br />
 <details> 
   <summary> Exercise 2 ---> Task 1: Create a virtual machine to use as a web server.</summary>
 <br />
-Navigate to the Azure portal and search for "Virtual machines."
-- Click "+ Create" and select "+ Azure virtual machine" from the dropdown list.<br />
+Navigate to the Azure portal and search for `Virtual machines.`
+- Click `+ Create` and select `+ Azure virtual machine` from the dropdown list.
+  <br />
+  
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+  
 - On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
 - Subscription: Select the Azure subscription for this lab.<br />
-- Resource group: Choose "AZ500LAB07."<br />
-- Virtual machine name: Enter "myVmWeb."<br />
-- Region: Select "(US)East US."<br />
-- Image: Choose "Windows Server 2022 Datacenter: Azure Edition - x64 Gen2."<br />
-- Size: Select "Standard D2s v3."<br />
-- Username: Enter "Student."<br />
+- Resource group: Choose `AZ500LAB07`<br />
+- Virtual machine name: Enter `myVmWeb`<br />
+- Region: Select `(US)South Central US or the nearest region to you`<br />
+- Image: Choose `Windows Server 2022 Datacenter: Azure Edition - x64 Gen2`<br />
+- Size: Select `Standard D2s v3`<br />
+- Username: Enter `Student`<br />
 - Password: Use your personal password.<br />
 - Confirm password: Retype your password.<br />
-- Public inbound ports: Set it to "None."<br />
-- Would you like to use an existing Windows Server License: Select "No."<br />
-- Click "Next: Disks" and set the OS disk type to "Standard HDD."<br />
-- Click "Next: Networking" and select the previously created network "myVirtualNetwork."<br />
-- Under "NIC network security group," choose "None."<br />
+- Public inbound ports: Set it to 'None'<br />
+- Would you like to use an existing Windows Server License: 'Leave selection unchecked`<br />
+
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+
+- Click "Next: Disks" and set the OS disk type to `Standard HDD`<br />
+  
+  ![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg) 
+ 
+- Click "Next: Networking" and select the previously created network `myVirtualNetwork`<br />
+- Under "NIC network security group," choose `None`<br />
+  
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+
+  
 - Click "Next: Management" and then "Next: Monitoring."<br />
 - On the "Monitoring" tab, verify that "Boot diagnostics" is enabled with a managed storage account.<br />
+  
+| Setting |	Value|
+|------------------ | ---------------- |  
+| Boot diagnostics |	Enabled with managed storage account (recommended) |
+  
 - Click "Review + create" and ensure successful validation.<br />
 - Click "Create" to deploy the virtual machine.<br />
 
@@ -213,7 +244,7 @@ Navigate to the Azure portal and search for "Virtual machines."
 |Virtual machine name	| myVmWeb |
 |Region	|(US) South Central US|
 |Image |	Windows Server 2022 Datacenter: Azure Edition- x64 Gen2|
-|Size |	Standard D2s v3|
+|Size |	Standard D2s v3 |
 |Username |	Student|
 |Password |	Please use your personal password created|
 |Confirm password |	Retype your password|
@@ -227,6 +258,8 @@ Navigate to the Azure portal and search for "Virtual machines."
 <br />
 Navigate to the Azure portal and go to the Virtual machines blade.<br />
   
+  >**Note**: The following will be the same as the previous Virtual Machine except for the Management Server, so no pictured image. 
+  
 - Click `+ Create` and select `+ Azure virtual machine` from the dropdown list.<br />
 - On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
 - Subscription: Select the Azure subscription for this lab.<br />
@@ -239,6 +272,22 @@ Navigate to the Azure portal and go to the Virtual machines blade.<br />
 - Password: Use your personal password.<br />
 - Public inbound ports: Set it to `None.`<br />
 - Already have a Windows Server license: Select `No.`<br />
+  
+| Setting |	Value |
+| ---------- | ----------- |  
+| Subscription |	the name of the Azure subscription you will be using in this lab |
+| Resource group |	AZ500LAB07|
+| Virtual machine name |	myVMMgmt |
+| Region |	South Central US or preferred region that is nearest to you|
+| Image	| Windows Server 2022 Datacenter: Azure Edition - x64 Gen2 |
+| Size |	Standard D2s v3|
+| Username |	Student|
+| Password |	Please use your personal password that you create|
+| Public inbound ports |	None|
+| Already have a Windows Server license |	No|
+  
+  >**Note**: For public inbound ports, we will rely on the precreated NSG.
+
 - Click `Next: Disks` and set the OS disk type to `Standard HDD`<br />
 - Click `Next: Networking` and select the previously created network `myVirtualNetwork`<br />
 - Under "NIC network security group," choose `None.`<br />
@@ -262,6 +311,9 @@ Go to the Virtual machines blade in the Azure portal and verify that both virtua
 - On the "myVMWeb | Networking" blade, click the "Application security groups" tab.<br />
 - Click "Configure the application security groups" and select "myAsgWebServers" from the Application security group drop-down list.<br />
 - Click "Save."<br />
+  
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+  
 - Navigate back to the Virtual machines blade and click the entry for the "myVMMgmt" virtual machine.<br />
 - On the "myVMMgmt" blade, click "Networking" in the Settings section.<br />
 - On the "myVMMgmt | Networking" blade, click the "Application security groups" tab.<br />
