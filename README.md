@@ -26,7 +26,8 @@ Task 4: Create inbound network security group rules to allow traffic to web serv
 <details> 
   <summary> Task 1: Create a virtual network </summary>
 
-Sign in to the Azure portal using an account that has the Owner or Contributor role in the Azure subscription.<br />
+Sign in to the Azure portal using an account that has the Owner or Contributor role in the Azure subscription.
+  <br />
 - In the Azure portal, search for `Virtual networks` and select it from the results. <br />
 - Click on `+ Create` on the Virtual networks blade.<br />
 - On the Basics tab of the Create virtual network blade, provide the following details: <br />
@@ -64,14 +65,15 @@ Click on `Review + create` and then click `Create` to create the virtual network
   <summary> Task 2: Create application security groups </summary>
 
 In the Azure portal, search for `Application security groups` and select it from the results.
-Click on `+ Create` on the Application security groups blade.
-On the Basics tab of the Create an application security group blade, provide the following details:
-Resource group: Select `AZ500LAB07` or your preferred Resource Group Name that would be that lab.
-Name: Enter `myAsgWebServers` (this group will be for web servers).
-Click on `Review + create` and then click `Create`.
-Repeat steps 2-4 to create another application security group with the following details:
-Resource group: Select `AZ500LAB07`.
-Name: Enter `myAsgMgmtServers` (this group will be for management servers).
+  <br />
+- Click on `+ Create` on the Application security groups blade.<br />
+- On the Basics tab of the Create an application security group blade, provide the following details:<br />
+- Resource group: Select `AZ500LAB07` or your preferred Resource Group Name that would be that lab.<br />
+- Name: Enter `myAsgWebServers` (this group will be for web servers).<br />
+- Click on `Review + create` and then click `Create`.
+- Repeat steps 2-4 to create another application security group with the following details:<br />
+- Resource group: Select `AZ500LAB07`.<br />
+- Name: Enter `myAsgMgmtServers` (this group will be for management servers).<br />
   
 | Setting |	Value|
 |----------- | ----------- |  
@@ -87,19 +89,21 @@ Name: Enter `myAsgMgmtServers` (this group will be for management servers).
   <summary> Task 3: Create a network security group and associate it with the subnet</summary>
 
 In the Azure portal, search for `Network security groups` and select it from the results.
-- Click on `+ Create` on the Network security groups blade.
-- On the Basics tab of the Create network security group blade, provide the following details:
-- Subscription: Select the Azure subscription you are using for this lab.
-- Resource group: Select `AZ500LAB07`.
-- Name: Enter `myNsg`.
-- Region: Select `East US`.
-- Click on "Review + create" and then click `Create`.
-- Navigate back to the Network security groups blade and select the `myNsg` entry.
-- On the myNsg blade, in the Settings section, click "Subnets" and then click `+ Associate`.
-- On the Associate subnet blade, provide the following details:
-- Virtual network: Select `myVirtualNetwork`.
-- Subnet: Select `default`.
-- Click `OK` to associate the network security group with the subnet.
+  <br />
+- Click on `+ Create` on the Network security groups blade.<br />
+- On the Basics tab of the Create network security group blade, provide the following details:<br />
+- Subscription: Select the Azure subscription you are using for this lab.<br />
+- Resource group: Select `AZ500LAB07`.<br />
+- Name: Enter `myNsg`.<br />
+- Region: Select `East US`.<br />
+- Click on "Review + create" and then click `Create`.<br />
+- Navigate back to the Network security groups blade and select the `myNsg` entry.<br />
+- On the myNsg blade, in the Settings section, click "Subnets" and then click `+ Associate`.<br />
+- On the Associate subnet blade, provide the following details:<br />
+- Virtual network: Select `myVirtualNetwork`.<br />
+- Subnet: Select `default`.<br />
+- Click `OK` to associate the network security group with the subnet.<br />
+  
   </details>
 <hr>
 <details>
@@ -129,6 +133,7 @@ Add inbound security rule:
 - Name: Enter "Allow-RDP-All."<br />
 - Click "Add" to create the new inbound rule.<br />
 - Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
+  
 </details>
 <hr>
 <br />
@@ -145,7 +150,7 @@ Task 4: Test the network traffic filtering.<br />
 
 <details> 
   <summary> Exercise 2 ---> Task 1: Create a virtual machine to use as a web server.</summary>
-
+<br />
 Navigate to the Azure portal and search for "Virtual machines."
 - Click "+ Create" and select "+ Azure virtual machine" from the dropdown list.<br />
 - On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
@@ -186,8 +191,9 @@ Navigate to the Azure portal and search for "Virtual machines."
 <hr>
 <details> 
   <summary> Exercise 2 ---> Task 2: Create a Management Server Virtual Machine</summary>
-
-Navigate to the Azure portal and go to the Virtual machines blade.
+<br />
+Navigate to the Azure portal and go to the Virtual machines blade.<br />
+  
 - Click `+ Create` and select `+ Azure virtual machine` from the dropdown list.<br />
 - On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
 - Subscription: Select the Azure subscription for this lab.<br />
@@ -215,8 +221,9 @@ Navigate to the Azure portal and go to the Virtual machines blade.
 
 <details>
   <summary> Exercise 2 ---> Task 3: Associate Network Interfaces with Application Security Groups</summary> 
-
+<br />
 Go to the Virtual machines blade in the Azure portal and verify that both virtual machines are listed with the "Running" status.<br />
+  
 - Click the entry for the "myVMWeb" virtual machine.<br />
 - On the "myVMWeb" blade, click "Networking" in the Settings section.<br />
 - On the "myVMWeb | Networking" blade, click the "Application security groups" tab.<br />
@@ -232,8 +239,9 @@ Go to the Virtual machines blade in the Azure portal and verify that both virtua
   
 <details>
   <summary> Exercise 2 ---> Task 4: Test Network Traffic Filtering and Lab Clean Up</summary>
-
+<br />
 Go to the "myVMMgmt" virtual machine blade in the Azure portal.<br />
+  
 - Click "Connect" and select "RDP" from the drop-down menu.<br />
 - Download the RDP file and use it to connect to the "myVMMgmt" Azure VM via Remote Desktop using the provided credentials.<br />
 - In the Azure portal, navigate to the "myVMWeb" virtual machine blade.<br />
@@ -245,11 +253,11 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 ```  
   >**Note**: Wait for the installation to complete.
   
-In the Azure portal, navigate back to the "myVMWeb" blade. <br />
-Identify the Public IP address of the "myVmWeb" Azure VM.<br />
-Open another browser tab and navigate to the identified IP address.<br />
-Verify that the default IIS web page is displayed, indicating that port 80 is allowed inbound from the internet based on the "myAsgWebServers" application security group.<br />
-Result: You have successfully validated the network security group (NSG) and application security group (ASG) configuration, and the network traffic is being correctly managed.
+- In the Azure portal, navigate back to the "myVMWeb" blade. <br />
+- Identify the Public IP address of the "myVmWeb" Azure VM.<br />
+- Open another browser tab and navigate to the identified IP address.<br />
+- Verify that the default IIS web page is displayed, indicating that port 80 is allowed inbound from the internet based on the "myAsgWebServers" application security group.<br />
+- Result: You have successfully validated the network security group (NSG) and application security group (ASG) configuration, and the network traffic is being correctly managed.
 
 Lab Cleanup:
 To avoid incurring unexpected costs, it is essential to remove any unused Azure resources.
