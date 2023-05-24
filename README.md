@@ -81,6 +81,8 @@ In the Azure portal, search for `Application security groups` and select it from
 |Name |	myAsgWebServers | 
 | Region |	South Central US|
   
+  >**Note**: This group will be for the web servers.
+
 <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20ASG%20WebServers.png?raw=true" height="60%" width="60%" alt="websever asg"/>  
   
 </details>
