@@ -55,9 +55,7 @@ Click on `Review + create` and then click `Create` to create the virtual network
 |Subnet name |	default |
 |Subnet address range	| 10.0.0.0/24 |
   
-Back on the IP addresses tab of the Create virtual network blade, click Review + create.
-
-On the Review + create tab of the Create virtual network blade, click Create.
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Review%20Creation%20of%20Virtual%20Network.png?raw=true" height="50%" width="50%" alt="Review Creation of Virtual Network"/>
 
   </details>
 <hr>
