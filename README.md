@@ -343,7 +343,8 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 - Identify the Public IP address of the "myVmWeb" Azure VM.<br />
 - Open another browser tab and navigate to the identified IP address.<br />
 - Verify that the default IIS web page is displayed, indicating that port 80 is allowed inbound from the internet based on the "myAsgWebServers" application security group.<br />
-- Result: You have successfully validated the network security group (NSG) and application security group (ASG) configuration, and the network traffic is being correctly managed.
+  
+  >**Note**:Result: You have successfully validated the network security group (NSG) and application security group (ASG) configuration, and the network traffic is being correctly managed.
 
 Lab Cleanup:
 To avoid incurring unexpected costs, it is essential to remove any unused Azure resources.
