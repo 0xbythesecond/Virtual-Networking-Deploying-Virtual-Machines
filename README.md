@@ -117,7 +117,7 @@ In the Azure portal, search for `Network security groups` and select it from the
 |Name	| myNsg|
 | Region |	South Central US|
  
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20NSG.png?raw=true" height="60%" width="60%" alt="Create NSG"/>  
   
 - Navigate back to the Network security groups blade and select the `myNsg` entry.<br />
 - On the myNsg blade, in the Settings section, click `Subnets` and then click `+ Associate`.<br />
