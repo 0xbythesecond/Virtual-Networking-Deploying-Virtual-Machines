@@ -1,6 +1,7 @@
 
 # Creating Virtual Networking Infrastructure and Deploying Virtual Machines
 
+![Network and Application Security Groups](https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Network%20and%20Application%20Security%20Group.png?raw=true)
 
 ## Introduction
 The lab consists of several tasks that will guide you through the process of creating a virtual network, setting up subnets, creating application security groups, configuring network security groups, and creating inbound security rules. These steps are essential for building a secure and well-structured virtual networking environment.
