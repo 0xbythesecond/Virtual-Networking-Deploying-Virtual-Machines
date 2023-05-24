@@ -85,6 +85,15 @@ In the Azure portal, search for `Application security groups` and select it from
 
 <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20ASG%20WebServers.png?raw=true" height="60%" width="60%" alt="websever asg"/>  
   
+|Setting |	Value|
+|----------- | ------------ |  
+|Resource group |	AZ500LAB07|
+|Name	| myAsgMgmtServers|
+|Region |	South Central US|
+  >**Note**: This group will be for the management servers.  
+  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20ASG%20MgmtServers.png?raw=true" height="60%" width="60%" alt="mgmtserver asg"/>
+  
 </details>
 <hr>
 <details> 
@@ -99,20 +108,38 @@ In the Azure portal, search for `Network security groups` and select it from the
 - Name: Enter `myNsg`.<br />
 - Region: Select `East US`.<br />
 - Click on "Review + create" and then click `Create`.<br />
+  
+| Setting |	Value|
+| ----------- | ----------- |  
+|Subscription |	the name of the Azure subscription you are using in this lab|
+|Resource group	| AZ500LAB07|
+|Name	| myNsg|
+| Region |	South Central US|
+ 
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)  
+  
 - Navigate back to the Network security groups blade and select the `myNsg` entry.<br />
-- On the myNsg blade, in the Settings section, click "Subnets" and then click `+ Associate`.<br />
+- On the myNsg blade, in the Settings section, click `Subnets` and then click `+ Associate`.<br />
 - On the Associate subnet blade, provide the following details:<br />
 - Virtual network: Select `myVirtualNetwork`.<br />
 - Subnet: Select `default`.<br />
 - Click `OK` to associate the network security group with the subnet.<br />
+  
+  
+| Setting |	Value |
+| ----------- | -------- |  
+|Virtual network	| myVirtualNetwork|
+| Subnet |	default|
+
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
   
   </details>
 <hr>
 <details>
   <summary> Task 4: Create inbound NSG security rules </summary>
 
-- On the myNsg blade, in the Settings section, click "Inbound security rules". <br />
-- Review the default inbound security rules and then click "+ Add" to add a new rule. <br />
+- On the myNsg blade, in the Settings section, click `Inbound security rules`. <br />
+- Review the default inbound security rules and then click `+ Add` to add a new rule. <br />
 - On the Add inbound security rule. <br />
 - On the Add inbound security rule blade, specify the following settings to allow TCP ports 80 and 443 to the myAsgWebServers application security group (leave all other values with their default values):
 
@@ -121,8 +148,10 @@ In the Azure portal, search for `Network security groups` and select it from the
 |Destination |	in the drop-down list, select Application security group and then click myAsgWebServers|
 |Destination| port ranges	80,443|
 |Protocol |	TCP |
-| Priority |	100 |
+| Priority |	100 (lower the number, the higher the priority) |
 |Name |	Allow-Web-All|
+ 
+![Placeholder](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)  
   
 Add inbound security rule:
 - Navigate to the "myNsg" blade. <br />
@@ -135,6 +164,8 @@ Add inbound security rule:
 - Name: Enter "Allow-RDP-All."<br />
 - Click "Add" to create the new inbound rule.<br />
 - Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
+  
+![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
   
 </details>
 <hr>
