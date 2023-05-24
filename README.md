@@ -125,7 +125,8 @@ In the Azure portal, search for `Network security groups` and select it from the
 - Virtual network: Select `myVirtualNetwork`.<br />
 - Subnet: Select `default`.<br />
 - Click `OK` to associate the network security group with the subnet.<br />
-  
+ 
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Associate%20NSG%20Subnet.png?raw=true" height="60%" width="60%" alt="Associate Subnet"/>  
   
 | Setting |	Value |
 | ----------- | -------- |  
