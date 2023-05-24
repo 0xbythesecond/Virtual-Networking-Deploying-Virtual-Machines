@@ -12,7 +12,7 @@ Now, let's dive into the lab and start building your virtual networking infrastr
 
 ## Task to Implement Virtual Networking Infrastructure
 
-Exercise 1: Create the virtual networking infrastructure
+### Exercise 1: Create the virtual networking infrastructure
 
 Estimated Time: 20 minutes
 
@@ -77,27 +77,29 @@ Name: Enter `myAsgMgmtServers` (this group will be for management servers).
 |----------- | ----------- |  
 |Resource group |	AZ500LAB07|
 |Name |	myAsgWebServers | 
-| Region |	East US|
+| Region |	South Central US|
+  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20ASG%20WebServers.png?raw=true" height="60%" width="60%" alt="websever asg"/>  
   
 </details>
 <hr>
 <details> 
   <summary> Task 3: Create a network security group and associate it with the subnet</summary>
 
-In the Azure portal, search for "Network security groups" and select it from the results.
-Click on "+ Create" on the Network security groups blade.
-On the Basics tab of the Create network security group blade, provide the following details:
-Subscription: Select the Azure subscription you are using for this lab.
-Resource group: Select "AZ500LAB07".
-Name: Enter "myNsg".
-Region: Select "East US".
-Click on "Review + create" and then click "Create".
-Navigate back to the Network security groups blade and select the "myNsg" entry.
-On the myNsg blade, in the Settings section, click "Subnets" and then click "+ Associate".
-On the Associate subnet blade, provide the following details:
-Virtual network: Select "myVirtualNetwork".
-Subnet: Select "default".
-Click "OK" to associate the network security group with the subnet.
+In the Azure portal, search for `Network security groups` and select it from the results.
+- Click on `+ Create` on the Network security groups blade.
+- On the Basics tab of the Create network security group blade, provide the following details:
+- Subscription: Select the Azure subscription you are using for this lab.
+- Resource group: Select `AZ500LAB07`.
+- Name: Enter `myNsg`.
+- Region: Select `East US`.
+- Click on "Review + create" and then click `Create`.
+- Navigate back to the Network security groups blade and select the `myNsg` entry.
+- On the myNsg blade, in the Settings section, click "Subnets" and then click `+ Associate`.
+- On the Associate subnet blade, provide the following details:
+- Virtual network: Select `myVirtualNetwork`.
+- Subnet: Select `default`.
+- Click `OK` to associate the network security group with the subnet.
   </details>
 
 <details>
@@ -116,55 +118,73 @@ Click "OK" to associate the network security group with the subnet.
 | Priority |	100 |
 |Name |	Allow-Web-All|
   
-  Lab Documentation: Creating Virtual Networking Infrastructure and Deploying Virtual Machines
-
-Lab Overview:
-The purpose of this lab is to guide you through the process of creating a virtual networking infrastructure in Azure and deploying virtual machines within that network. You will learn how to set up a virtual network, configure network security groups, create application security groups, and define inbound security rules to control network traffic. Additionally, you will deploy virtual machines and test network filters to validate the configuration.
-
-Lab Steps:
-
-Exercise 1: Create Virtual Network and Network Security
-
 Add inbound security rule:
-Navigate to the "myNsg" blade.
-In the Settings section, click "Inbound security rules" and then click "+ Add."
-On the "Add inbound security rule" blade, provide the following settings:
-Destination: Select "Application security group" and choose "myAsgMgmtServers."
-Destination port ranges: Enter "3389."
-Protocol: Select "TCP."
-Priority: Set it to "110."
-Name: Enter "Allow-RDP-All."
-Click "Add" to create the new inbound rule.
-Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
+- Navigate to the "myNsg" blade. <br />
+- In the Settings section, click "Inbound security rules" and then click "+ Add."<br />
+- On the "Add inbound security rule" blade, provide the following settings:<br />
+- Destination: Select "Application security group" and choose "myAsgMgmtServers."<br />
+- Destination port ranges: Enter "3389."<br />
+- Protocol: Select "TCP."<br />
+- Priority: Set it to "110."<br />
+- Name: Enter "Allow-RDP-All."<br />
+- Click "Add" to create the new inbound rule.<br />
+- Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
+</details>
 
 Exercise 2: Deploy Virtual Machines and Test Network Filters
 
 Estimated timing: 25 minutes
 
-Task 1: Create a Web Server Virtual Machine
+In this exercise, you will complete the following tasks:
+
+Task 1: Create a virtual machine to use as a web server.<br />
+Task 2: Create a virtual machine to use as a management server.<br />
+Task 3: Associate each virtual machines network interface to it’s application security group.<br />
+Task 4: Test the network traffic filtering.<br />
+
+<details> 
+  <summary> Exercise 2 ---> Task 1: Create a virtual machine to use as a web server.</summary>
 
 Navigate to the Azure portal and search for "Virtual machines."
-Click "+ Create" and select "+ Azure virtual machine" from the dropdown list.
-On the Basics tab of the "Create a virtual machine" blade, provide the following settings:
-Subscription: Select the Azure subscription for this lab.
-Resource group: Choose "AZ500LAB07."
-Virtual machine name: Enter "myVmWeb."
-Region: Select "(US)East US."
-Image: Choose "Windows Server 2022 Datacenter: Azure Edition - x64 Gen2."
-Size: Select "Standard D2s v3."
-Username: Enter "Student."
-Password: Use your personal password created in Lab 04.
-Confirm password: Retype your password.
-Public inbound ports: Set it to "None."
-Would you like to use an existing Windows Server License: Select "No."
-Click "Next: Disks" and set the OS disk type to "Standard HDD."
-Click "Next: Networking" and select the previously created network "myVirtualNetwork."
-Under "NIC network security group," choose "None."
-Click "Next: Management" and then "Next: Monitoring."
-On the "Monitoring" tab, verify that "Boot diagnostics" is enabled with a managed storage account.
-Click "Review + create" and ensure successful validation.
-Click "Create" to deploy the virtual machine.
-Task 2: Create a Management Server Virtual Machine
+Click "+ Create" and select "+ Azure virtual machine" from the dropdown list.<br />
+On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
+Subscription: Select the Azure subscription for this lab.<br />
+Resource group: Choose "AZ500LAB07."<br />
+Virtual machine name: Enter "myVmWeb."<br />
+Region: Select "(US)East US."<br />
+Image: Choose "Windows Server 2022 Datacenter: Azure Edition - x64 Gen2."<br />
+Size: Select "Standard D2s v3."<br />
+Username: Enter "Student."<br />
+Password: Use your personal password.<br />
+Confirm password: Retype your password.<br />
+Public inbound ports: Set it to "None."<br />
+Would you like to use an existing Windows Server License: Select "No."<br />
+Click "Next: Disks" and set the OS disk type to "Standard HDD."<br />
+Click "Next: Networking" and select the previously created network "myVirtualNetwork."<br />
+Under "NIC network security group," choose "None."<br />
+Click "Next: Management" and then "Next: Monitoring."<br />
+On the "Monitoring" tab, verify that "Boot diagnostics" is enabled with a managed storage account.<br />
+Click "Review + create" and ensure successful validation.<br />
+Click "Create" to deploy the virtual machine.<br />
+
+|Setting |	Value |
+| ------------ | ----------- |  
+|Subscription |	the name of the Azure subscription you will be using in this lab |
+|Resource group |	AZ500LAB07|
+|Virtual machine name	| myVmWeb |
+|Region	|(US) South Central US|
+|Image |	Windows Server 2022 Datacenter: Azure Edition- x64 Gen2|
+|Size |	Standard D2s v3|
+|Username |	Student|
+|Password |	Please use your personal password created|
+|Confirm password |	Retype your password|
+|Public inbound ports |	None|
+|Would you like to use an existing Windows Server License |	No  |
+  
+</details>
+<hr>
+<details> 
+  <summary> Task 2: Create a Management Server Virtual Machine</summary>
 
 Navigate to the Azure portal and go to the Virtual machines blade.
 Click "+ Create" and select "+ Azure virtual machine" from the dropdown list.
@@ -187,8 +207,11 @@ On the "Monitoring" tab, verify that "Boot diagnostics" is enabled with a manage
 Click "Review + create" and ensure successful validation.
 Click "Create" to deploy the virtual machine.
 Note: Wait for both virtual machines to be provisioned before continuing.
+  </details>
+<hr>
 
-Task 3: Associate Network Interfaces with Application Security Groups
+<details>
+  <summary> Task 3: Associate Network Interfaces with Application Security Groups</summary> 
 
 Go to the Virtual machines blade in the Azure portal and verify that both virtual machines are listed with the "Running" status.
 Click the entry for the "myVMWeb" virtual machine.
@@ -201,7 +224,11 @@ On the "myVMMgmt" blade, click "Networking" in the Settings section.
 On the "myVMMgmt | Networking" blade, click the "Application security groups" tab.
 Click "Configure the application security groups" and select "myAsgMgmtServers" from the Application security group drop-down list.
 Click "Save."
-Task 4: Test Network Traffic Filtering
+  </details>
+  <hr>
+  
+<details>
+  <summary> Task 4: Test Network Traffic Filtering</summary>
 
 Go to the "myVMMgmt" virtual machine blade in the Azure portal.
 Click "Connect" and select "RDP" from the drop-down menu.
@@ -209,9 +236,10 @@ Download the RDP file and use it to connect to the "myVMMgmt" Azure VM via Remot
 In the Azure portal, navigate to the "myVMWeb" virtual machine blade.
 On the "myVMWeb" blade, in the Operations section, click "Run command" and then select "RunPowerShellScript."
 Run the following command in the Run Command Script pane to install the Web server role on "myVMWeb":
-arduino
-Copy code
+  
+```powershell
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
+```  
 Wait for the installation to complete.
 In the Azure portal, navigate back to the "myVMWeb" blade.
 Identify the Public IP address of the "myVmWeb" Azure VM.
@@ -224,14 +252,12 @@ To avoid incurring unexpected costs, it is essential to remove any unused Azure 
 
 Open the Cloud Shell by clicking the first icon in the top right of the Azure Portal.
 If prompted, select PowerShell and Create storage.
-In the PowerShell session within the Cloud Shell pane, run the following command to remove the
+In the PowerShell session within the Cloud Shell pane, run the following command to remove the resource group you created in this lab:
 
-
-
-
-Regenerate response
-
-Continue generating
-
+```powershell
+ Remove-AzResourceGroup -Name "AZ500LAB07" -Force -AsJob
+```
+  
+Close the Cloud Shell pane.
   
   </details>
