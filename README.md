@@ -154,7 +154,7 @@ In the Azure portal, search for `Network security groups` and select it from the
 | Priority |	100 (lower the number, the higher the priority) |
 |Name |	Allow-Web-All|
  
-<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Enter%20Values%20for%20NSG%20Inbound%20Security%20Rules.png?raw=true" height="60%" width="60%" alt="Inbound Security Rule Settings"/>  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Enter%20Values%20for%20NSG%20Inbound%20Security%20Rules.png?raw=true" height="50%" width="60%" alt="Inbound Security Rule Settings myVMWeb"/>  
 <br />
   
 Add inbound security rule:
@@ -169,7 +169,6 @@ Add inbound security rule:
 - Click "Add" to create the new inbound rule.<br />
 - Result: You have added an inbound security rule to allow RDP (TCP port 3389) traffic to the "myAsgMgmtServers" application security group.
  
-  >**Note**: Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups.
 
 |Setting	| Value|
 |---------- | ----------- |  
@@ -179,8 +178,9 @@ Add inbound security rule:
 | Priority |	110 |
 | Name |	Allow-RDP-All|
 
-
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Enter%20Values%20for%20NSG%20Inbound%20Security%20Rules%20(asg%20mgmt).png?raw=true" height="50%" width="60%" alt="Inbound Security Rules Settings myVMMgmt"/>
+  
+  >**Note**: Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups.
   
 </details>
 <hr>
