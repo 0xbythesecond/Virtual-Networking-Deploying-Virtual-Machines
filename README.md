@@ -204,7 +204,7 @@ Navigate to the Azure portal and search for `Virtual machines.`
 - Click `+ Create` and select `+ Azure virtual machine` from the dropdown list.
   <br />
   
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+  <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Create%20Virtual%20Machine.png?raw=true" height="30%" width="30%" alt="Create Virtual Machine Initial Step"/>
   
 - On the Basics tab of the "Create a virtual machine" blade, provide the following settings:<br />
 - Subscription: Select the Azure subscription for this lab.<br />
