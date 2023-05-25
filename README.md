@@ -377,6 +377,7 @@ In the PowerShell session within the Cloud Shell pane, run the following command
 ```powershell
  Remove-AzResourceGroup -Name "AZ500LAB07" -Force -AsJob
 ```
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Run%20Powershell%20Resource%20Group%20Delete%20Script.png?raw=true" height="80%" width="80%" alt="Powershell Command to Delete Resource Group"/>
   
 Close the Cloud Shell pane.
   
