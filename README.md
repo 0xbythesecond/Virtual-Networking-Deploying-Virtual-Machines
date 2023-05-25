@@ -357,6 +357,9 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
   
 - In the Azure portal, navigate back to the "myVMWeb" blade. <br />
 - Identify the Public IP address of the "myVmWeb" Azure VM.<br />
+ 
+  <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Identify%20Public%20IP%20Address.png?raw=true" height="100%" width="100%" alt="identify public IP address"/> 
+  
 - Open another browser tab and navigate to the identified IP address.<br />
 - Verify that the default IIS web page is displayed, indicating that port 80 is allowed inbound from the internet based on the "myAsgWebServers" application security group.<br />
   
