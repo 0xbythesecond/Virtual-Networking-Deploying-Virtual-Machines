@@ -317,7 +317,7 @@ Go to the Virtual machines blade in the Azure portal and verify that both virtua
 - Click "Configure the application security groups" and select "myAsgWebServers" from the Application security group drop-down list.<br />
 - Click "Save."<br />
   
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Configure%20Application%20Security%20Groups%20for%20NiC%20(myVmWeb).png?raw=true" height="80%" width="80%" alt="Associate NiC with ASG on myVWeb"/>
   
 - Navigate back to the Virtual machines blade and click the entry for the "myVMMgmt" virtual machine.<br />
 - On the "myVMMgmt" blade, click "Networking" in the Settings section.<br />
