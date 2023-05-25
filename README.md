@@ -350,7 +350,10 @@ Go to the "myVMMgmt" virtual machine blade in the Azure portal.<br />
 ```powershell
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
 ```  
-  >**Note**: Wait for the installation to complete.
+  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Run%20Powershell%20Script.png?raw=true" height="60%" width="60%" alt="Run Powershell Script to Install Web Server Rolse myVMWeb"/>
+  
+  >**Note**: Wait for the installation to complete. There will be a notification of success. 
   
 - In the Azure portal, navigate back to the "myVMWeb" blade. <br />
 - Identify the Public IP address of the "myVmWeb" Azure VM.<br />
