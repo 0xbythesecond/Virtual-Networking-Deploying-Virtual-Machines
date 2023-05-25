@@ -380,5 +380,7 @@ In the PowerShell session within the Cloud Shell pane, run the following command
 <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Run%20Powershell%20Resource%20Group%20Delete%20Script.png?raw=true" height="80%" width="80%" alt="Powershell Command to Delete Resource Group"/>
   
 Close the Cloud Shell pane.
+
+  >**Note**:  Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs.
   
   </details>
