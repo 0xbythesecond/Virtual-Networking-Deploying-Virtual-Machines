@@ -363,6 +363,8 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 - Open another browser tab and navigate to the identified IP address.<br />
 - Verify that the default IIS web page is displayed, indicating that port 80 is allowed inbound from the internet based on the "myAsgWebServers" application security group.<br />
   
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/IIS%20Webpage%20Validation.png?raw=true" height="60%" width="60%" alt="IIS Webpage Validation"/>  
+  
   >**Note**:Result: You have successfully validated the network security group (NSG) and application security group (ASG) configuration, and the network traffic is being correctly managed.
 
 Lab Cleanup:
