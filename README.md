@@ -154,7 +154,8 @@ In the Azure portal, search for `Network security groups` and select it from the
 | Priority |	100 (lower the number, the higher the priority) |
 |Name |	Allow-Web-All|
  
-![Placeholder](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Enter%20Values%20for%20NSG%20Inbound%20Security%20Rules.png?raw=true" height="60%" width="60%" alt="Inbound Security Rule Settings"/>  
+<br />
   
 Add inbound security rule:
 - Navigate to the "myNsg" blade. <br />
