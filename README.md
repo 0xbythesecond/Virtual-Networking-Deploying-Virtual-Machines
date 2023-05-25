@@ -218,8 +218,10 @@ Navigate to the Azure portal and search for `Virtual machines.`
 - Confirm password: Retype your password.<br />
 - Public inbound ports: Set it to 'None'<br />
 - Would you like to use an existing Windows Server License: 'Leave selection unchecked`<br />
+  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/create%20virtual%20machine%20(values).png?raw=true" height="70%" width="70%" alt="Virtual Machine Settings for Server"/>   
 
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
+
 
 - Click "Next: Disks" and set the OS disk type to `Standard HDD`<br />
   
