@@ -126,15 +126,13 @@ In the Azure portal, search for `Network security groups` and select it from the
 - Subnet: Select `default`.<br />
 - Click `OK` to associate the network security group with the subnet.<br />
  
-<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Associate%20NSG%20Subnet.png?raw=true" height="60%" width="60%" alt="Associate Subnet"/>  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Associate%20NSG%20Subnet.png?raw=true" height="90%" width="90%" alt="Associate Subnet"/>  
   
 | Setting |	Value |
 | ----------- | -------- |  
 |Virtual network	| myVirtualNetwork|
 | Subnet |	default|
 
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
-  
   </details>
 <hr>
 <details>
@@ -142,6 +140,9 @@ In the Azure portal, search for `Network security groups` and select it from the
 
 - On the myNsg blade, in the Settings section, click `Inbound security rules`. <br />
 - Review the default inbound security rules and then click `+ Add` to add a new rule. <br />
+  
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Add%20Inbound%20Security%20Rules.png?raw=true" height="60%"  width="60%" alt="Select to Add an inbound security rule"/>
+  
 - On the Add inbound security rule. <br />
 - On the Add inbound security rule blade, specify the following settings to allow TCP ports 80 and 443 to the myAsgWebServers application security group (leave all other values with their default values):
 
