@@ -230,8 +230,7 @@ Navigate to the Azure portal and search for `Virtual machines.`
 - Click "Next: Networking" and select the previously created network `myVirtualNetwork`<br />
 - Under "NIC network security group," choose `None`<br />
   
-![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg)
-
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Values%20for%20Networking%20on%20VM.png?raw=true" height="50%" width="50%" alt="Networking Settings for myVMWeb"/>
   
 - Click "Next: Management" and then "Next: Monitoring."<br />
 - On the "Monitoring" tab, verify that "Boot diagnostics" is enabled with a managed storage account.<br />
