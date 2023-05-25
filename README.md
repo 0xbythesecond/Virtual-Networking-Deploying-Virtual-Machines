@@ -342,6 +342,9 @@ Go to the "myVMMgmt" virtual machine blade in the Azure portal.<br />
 - Download the RDP file and use it to connect to the "myVMMgmt" Azure VM via Remote Desktop using the provided credentials.<br />
 - In the Azure portal, navigate to the "myVMWeb" virtual machine blade.<br />
 - On the "myVMWeb" blade, in the Operations section, click "Run command" and then select "RunPowerShellScript."<br />
+ 
+ <img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Run%20PowerShell%20Command.png?raw=true" height="90%" width="90%" alt="Select Run Command to Execute PowerShell Script"/>  
+  
 - Run the following command in the Run Command Script pane to install the Web server role on "myVMWeb":
   
 ```powershell
