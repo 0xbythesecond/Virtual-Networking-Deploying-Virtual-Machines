@@ -225,8 +225,8 @@ Navigate to the Azure portal and search for `Virtual machines.`
 
 - Click "Next: Disks" and set the OS disk type to `Standard HDD`<br />
   
-  ![Placeholder image](https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg) 
- 
+<img src="https://github.com/0xbythesecond/Virtual-Networking-Deploying-Virtual-Machines/blob/main/Select%20OS%20Disk%20Type.png?raw=true" height="50%" width="50%" alt="Select Os Disk Type"/>
+  
 - Click "Next: Networking" and select the previously created network `myVirtualNetwork`<br />
 - Under "NIC network security group," choose `None`<br />
   
