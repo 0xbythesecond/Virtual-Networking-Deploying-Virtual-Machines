@@ -384,3 +384,23 @@ Close the Cloud Shell pane.
   >**Note**:  Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs.
   
   </details>
+  
+ ## Reflection
+Through the process of creating a virtual network, application security groups, and network security groups, I gained hands-on experience in configuring and securing network resources in Azure. This exercise allowed me to understand the importance of properly defining IP addresses, subnets, security rules, and associations between resources.
+
+I learned how to navigate the Azure portal and utilize various settings and options to create and configure virtual machines, assign security groups, and manage network traffic. The step-by-step instructions provided clear guidance, enabling me to follow along and successfully complete the tasks.
+
+By associating network interfaces with application security groups, I experienced firsthand how traffic filtering can be implemented and managed at a granular level. This approach enhances security by allowing only authorized traffic to reach specific resources, such as web servers and management servers.
+
+Overall, this exercise helped me develop practical skills in network resource management and security within the Azure environment. I feel more confident in my ability to create and configure virtual networks and apply appropriate security measures to protect my applications and data.
+
+## Conclusion
+Creating a VNet (virtual network) and implementing network and application security groups are crucial steps in ensuring the secure and efficient operation of cloud-based resources. Azure provides a booming set of tools and features that streamline the configuration and management of network resources.
+
+Through careful configuration of IP addresses, subnets, and security rules, an organization(s) can create distinct network environments that offer isolation, precise control over traffic, and effective mitigation of potential security vulnerabilities. Application security groups enable fine-grained access control, allowing specific groups of resources to communicate with each other while restricting unauthorized access.
+
+The ability to associate network interfaces with application security groups further enhances security and simplifies management. By grouping resources based on their intended roles or functions, administrators can apply consistent security policies and streamline the management of network traffic.
+
+Through this exercise, I have gained valuable hands-on experience in creating virtual networks, configuring security groups, and managing network traffic in Azure. These skills will prove invaluable in designing and implementing secure and scalable cloud-based architectures.
+
+As I continue to explore Azure and its networking capabilities, I will further refine my understanding of network security best practices and continue to strengthen my ability to design and implement robust and secure network architectures in the cloud.
